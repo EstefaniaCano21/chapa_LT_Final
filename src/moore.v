@@ -10,7 +10,6 @@ module moore (
     output [2:0] state_leds
 );
 
-    // Estados codificados como parámetros
     parameter S0 = 2'd0;
     parameter S1 = 2'd1;
     parameter S2 = 2'd2;
@@ -18,7 +17,6 @@ module moore (
 
     reg [1:0] current, next;
 
-    // Lógica de transición de estado (secuencial)
     always @(posedge clk or posedge reset) begin
         if (reset)
             current <= S0;
@@ -26,7 +24,6 @@ module moore (
             current <= next;
     end
 
-    // Lógica de siguiente estado (combinacional)
     always @(*) begin
         next = current;
         case (current)
@@ -39,11 +36,10 @@ module moore (
         endcase
     end
 
-    // Salidas Moore
     assign state = current;
     assign locked_led   = (current != S3);
     assign unlocked_led = (current == S3);
     assign error_led    = (enter && !correct_digit && current != S3);
-    assign state_leds   = {1'b0, current}; // Extendido a 3 bits
+    assign state_leds   = {1'b0, current}; // Expandido a 3 bits
 
 endmodule
