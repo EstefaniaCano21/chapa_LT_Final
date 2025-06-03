@@ -4,9 +4,7 @@ module slow_clock (
     output reg clk_out
 );
 
-    // Parámetro de división para generar ~2Hz desde 100MHz
     parameter DIV = 25000000;
-
     reg [24:0] counter;
 
     always @(posedge clk or posedge reset) begin
