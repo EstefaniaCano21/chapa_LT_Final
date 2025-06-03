@@ -2,7 +2,8 @@ module tt_um_fsm_lock (
     input  wire [7:0] ui_in,    // Entradas del usuario
     output wire [7:0] uo_out,   // Salidas al usuario
     input  wire       clk,      // Reloj principal
-    input  wire       rst_n     // Reset activo bajo
+    input  wire       rst_n,    // Reset activo bajo
+    input  wire       ena       // <---- Puerto obligatorio en Tiny Tapeout
 );
 
     // Señales internas
