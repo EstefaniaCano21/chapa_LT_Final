@@ -40,6 +40,7 @@ module moore (
     assign locked_led   = (current != S3);
     assign unlocked_led = (current == S3);
     assign error_led    = (enter && !correct_digit && current != S3);
-    assign state_leds   = {1'b0, current}; // Expandido a 3 bits
+    assign state_leds   = {1'b0, current};
 
 endmodule
+
