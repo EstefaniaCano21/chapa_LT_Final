@@ -13,7 +13,7 @@ module tt_um_fsm_lock (
     wire correct_digit;
 
     // Instancia de la FSM Mealy
-    fsm_mealy u_fsm_mealy (
+    mealy u_fsm_mealy (
         .digit(digit),
         .state(state),
         .enter(enter),
@@ -21,7 +21,7 @@ module tt_um_fsm_lock (
     );
 
     // Instancia de la FSM Moore
-    fsm_moore u_fsm_moore (
+    moore u_fsm_moore (
         .clk(clk),
         .reset(reset),
         .enter(enter),
