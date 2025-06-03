@@ -1,4 +1,4 @@
-module fsm_mealy (
+module mealy (
     input [3:0] digit,
     input [1:0] state,
     input enter,
