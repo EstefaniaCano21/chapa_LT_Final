@@ -5,7 +5,7 @@
 SIM ?= icarus
 TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
-PROJECT_SOURCES = slow_clock.v mealy.v moore.v tt_um_fsm_lock.v
+PROJECT_SOURCES = tt_um_fsm_lock.v mealy.v moore.v
 ifneq ($(GATES),yes)
 
 # RTL simulation:
