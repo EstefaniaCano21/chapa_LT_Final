@@ -1,4 +1,4 @@
-module fsm_moore (
+module moore (
     input clk,
     input reset,
     input enter,
