@@ -1,6 +1,6 @@
 # Tiny Tapeout project information
 project:
-  title:        "FSM_Chapa"
+  title:        "FSM_Chapa" 
   author:       "LT"
   discord:      "EstefaniaCano21"
   description:  "Sistema de chapa electrónica con FSM Mealy y Moore implementado en SKY130 vía Tiny Tapeout."
